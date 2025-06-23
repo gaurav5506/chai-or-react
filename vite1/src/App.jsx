@@ -8,7 +8,7 @@ function App() {
 
   const addvalue=()=>{
     if(counter < max){
-    setcounter(counter+1)
+    // setcounter(counter+1)
     setcounter(counter+1)
   }
 }
