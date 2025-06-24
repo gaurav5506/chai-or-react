@@ -2,7 +2,6 @@ import React from 'react'
 
 function Card({channel}) {
     // console.log('props',props);
-    // console.log('props',props);
   return (
     <>
       <div className='relative w-lg border-4 border-red-500 bg-green-400 rounded-xl p-4 text-black text-[10px]'>helllo
