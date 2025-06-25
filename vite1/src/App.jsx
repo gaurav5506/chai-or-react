@@ -1,32 +1,24 @@
 import {useState}from 'react';
 
 function App() {
-  // let counter=5
-  let [counter,setcounter]=useState(0)
-  let min=0;
-  let max=10;
+  
+  const [value,setValue]= useState(1)
+  const [MultipliedValue,setMultipliedValue]= useState(1)
 
-  const addvalue=()=>{
-    if(counter < max){
-    setcounter(counter+1)
+  const MultiplyByFive=()=>{
+    setMultipliedValue(value*5)
+    setValue(value+1)
   }
-}
-  const removevalue=()=>{
-    if(counter > min){
-    setcounter(counter-1)
-  }
-}
 
-  return (
-    <>
-    <h1>A Counter App </h1>
-    <h2>counter value: {counter}</h2>
-
-    <button onClick={addvalue} disabled={counter===max}>add value</button>
-    <button onClick={removevalue} disabled={counter===min}>remove value</button>
-    <p>{counter}</p>
+  return(
+  <>
+    <h1>Main value: {value}</h1>
+    <button onClick={MultiplyByFive}>Click to multiply by 5</button>
+    <h2>multiplied value: {MultipliedValue}</h2>
     </>
-  )
+
+    )  
+  
 }
 
 export default App
